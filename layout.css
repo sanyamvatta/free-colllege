@@ -42,7 +42,7 @@ body {
   min-height: 100vh;
   /*temporary you can remove it, i just applied it to have a full screen view of my work*/
   min-width: 100vw;
-  background: url(/static/background.jpg);
+  background: url(background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
