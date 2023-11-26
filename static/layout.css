@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+  overflow: -moz-scrollbars-none; /* For Firefox */
+}
+
+/* For WebKit-based browsers like Chrome and Safari */
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*these classes are nessesary if you want to Use navbar only*/
+:root {
+  --white: white;
+  --black: rgb(0, 0, 0);
+  --links: 18px;
+  --paragraph: 24px;
+  --heading: 40px;
+  --logoS: 100px;
+}
+
+.nav {
+  background-color: rgba(0,0,0,0.6);
+}
+
+body {
+  min-height: 100vh;
+  /*temporary you can remove it, i just applied it to have a full screen view of my work*/
+  min-width: 100vw;
+  background: url(/static/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  min-height: 79vh; /* This will make the main content take up the available space */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+}
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+.nav > .nav-header {
+  flex: 0.95;
+  padding-left: 1rem;
+}
+.nav > .nav-header > .nav-title {
+  font-size: 22px;
+  color: #fff;
+}
+.nav > .nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav > .nav-list > li {
+  list-style-type: none;
+}
+.nav > .nav-list > li a {
+  text-decoration: none;
+  color: #efefef;
+  cursor: pointer;
+}
+.nav > #nav-check {
+    display: none;
+}
+@media (max-width: 480px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0.2rem;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-list {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    height: 0;
+    transition: all 0.3s ease-in;
+    top: 40px;
+    left: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.6);
+  }
+  .nav > .nav-list > li {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 15px;
+  }
+  .nav > #nav-check:checked ~ .nav-list {
+    height: calc(100vh - 50px);
+  }
+}
+
+@media (max-width:730px) {
+  .main{
+    padding: 5vh 2%;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  margin-top: auto;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-links a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.s-link-youtube:hover {
+  color: #FF0000 !important ;
+}
+
+.s-link-insta:hover {
+  color: #d6249f !important;
+}
+
+.logo-link:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-position: bottom; /* Adjust the position for mobile screens */
+  }
+}
+
+.logo-image {
+  height: 50px;
+  width: 50px;
+}
+
+a{
+  text-decoration: none;
+  padding: 15px;
+}
+
+a:hover {
+  background-color: white;
+  border-radius: 50px;
+  color: black !important;
+}
+
+.page-title {
+  color: white;
+  padding: 2%;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.page-sub {
+  color: white;
+  padding: 1%;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.table-heading {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+
+.neon {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: rgba(0,0,0,0.6);
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+    0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.neon span {
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+      0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  71%,
+  100% {
+    text-shadow: none;
+  }
+}
+
+
+:root {
+  --accent-color: #FF6600;
+  --primary-color: #fff;
+}
+
+#progress-bar--container {
+  display: flex;
+  justify-content: center;
+}
+
+#progress-bar--container svg {
+  width: 400px;
+}
+/* Change the progress */
+#progress--circle {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 75;
+  stroke-linecap: round;
+}
+
+#progress--text {
+  fill: var(--primary-color);
+  font-weight: 750;
+  font-size: 5.5px;
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+
+svg {
+  transform: rotate(-90deg);
+}
+
