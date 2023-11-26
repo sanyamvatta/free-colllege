@@ -186,6 +186,9 @@ a{
   vertical-align:middle;
 }
 
+.donate-a:hover {
+  background-color: transparent;
+}
 
 .keyarea{
   padding: 1rem;
